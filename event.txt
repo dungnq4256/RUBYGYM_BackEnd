@@ -1,0 +1,11 @@
+CREATE TABLE `event` (
+   `id` int(11) NOT NULL AUTO_INCREMENT,
+   `title` varchar(1000) NOT NULL,
+   `detail_title` text NOT NULL,
+   `start_time` date NOT NULL,
+   `finish_time` date NOT NULL,
+   `thumbnail_image_url` varchar(400) NOT NULL,
+   `detail_image_url` varchar(400) NOT NULL,
+   `content` longtext NOT NULL,
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=latin1
