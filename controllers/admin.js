@@ -182,7 +182,7 @@ exports.createTrainer = async (req, res) => {
                     });
                 }
                 else {
-                    const sql_add_trainer = 'INSERT INTO trainer (name, phone, birthday, gender, address, avatar_url, admin_creator_id, password) Values (' + mysql.escape(req.body.name) + ', ' + mysql.escape(req.body.phone) + ', ' + mysql.escape(req.body.birthday) + ', ' + mysql.escape(req.body.gender) + ', ' + mysql.escape(req.body.address) + ', ' + mysql.escape(req.body.avatar_url) + ', ' + mysql.escape(id) + ", \'$2a$08$GU.s9NQSgxtpsJhX2af0yu1K/b8QJ7Ns/JUwi83To41d0BwDeauPW\')";
+                    const sql_add_trainer = 'INSERT INTO trainer (name, phone, birthday, gender, address, avatar_url, admin_creator_id, password) Values (' + mysql.escape(req.body.name) + ', ' + mysql.escape(req.body.phone) + ', ' + mysql.escape(req.body.birthday) + ', ' + mysql.escape(req.body.gender) + ', ' + mysql.escape(req.body.address) + ', ' + mysql.escape(req.body.avatar_url) + ', ' + mysql.escape(id) + ", \'$2a$08$Bdf1eMhN9TjlRFy2U32bz.oYnuqlUsPXqxN1aBnf.mhasSmgKhBKy\')";
                     await db.query(sql_add_trainer, (error) => {
                         if (error) {
                             console.log(error);
@@ -464,7 +464,7 @@ exports.createMember = async (req, res) => {
                     }
 
                     req.body.avatar_url = '/uploads/image-1642259517998.jpg';
-                    const sql_add_member = 'INSERT INTO member (name, phone, birthday, gender, address, avatar_url, admin_creator_id, password, package, trained_month, trainer_id) Values (' + mysql.escape(req.body.name) + ', ' + mysql.escape(req.body.phone) + ', ' + mysql.escape(req.body.birthday) + ', ' + mysql.escape(req.body.gender) + ', ' + mysql.escape(req.body.address) + ', ' + mysql.escape(req.body.avatar_url) + ', ' + mysql.escape(id) + ", \'$2a$08$GU.s9NQSgxtpsJhX2af0yu1K/b8QJ7Ns/JUwi83To41d0BwDeauPW\', " + mysql.escape(req.body.package) + ', ' + mysql.escape(trained_month) + ", 1)";
+                    const sql_add_member = 'INSERT INTO member (name, phone, birthday, gender, address, avatar_url, admin_creator_id, password, package, trained_month, trainer_id) Values (' + mysql.escape(req.body.name) + ', ' + mysql.escape(req.body.phone) + ', ' + mysql.escape(req.body.birthday) + ', ' + mysql.escape(req.body.gender) + ', ' + mysql.escape(req.body.address) + ', ' + mysql.escape(req.body.avatar_url) + ', ' + mysql.escape(id) + ", \'$2a$08$Bdf1eMhN9TjlRFy2U32bz.oYnuqlUsPXqxN1aBnf.mhasSmgKhBKy\', " + mysql.escape(req.body.package) + ', ' + mysql.escape(trained_month) + ", 1)";
                     await db.query(sql_add_member, (error) => {
                         if (error) {
                             console.log(error);
