@@ -37,6 +37,7 @@ exports.view = async (req, res) => {
                     message: "Get profile successfully!",
                     data: {
                         role: 'member',
+                        id: results[0].id,
                         name: results[0].name,
                         phone: results[0].phone,
                         birthday: results[0].birthday,
@@ -44,7 +45,8 @@ exports.view = async (req, res) => {
                         address: results[0].address,
                         created_at: results[0].created_at,
                         expired_at: results[0].expired_at,
-                        avatar_url: results[0].avatar_url
+                        avatar_url: results[0].avatar_url,
+                        trainer_id: results[0].trainer_id,
                     }
                 });
                 if (results.length === 0) {
